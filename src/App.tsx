@@ -1,13 +1,12 @@
-
 import React, { useState, useEffect, useMemo } from 'react';
-import { useSpotifyPlayer } from './hooks/useSpotifyPlayer.ts';
-import { fetchAudioFeatures, startPlayback } from './utils.ts';
-import type { AudioFeatures } from './types.ts';
-import { CLIENT_ID, REDIRECT_URI, SCOPES, TRACK_URIS } from './config.ts';
+import { useSpotifyPlayer } from './hooks/useSpotifyPlayer';
+import { fetchAudioFeatures, startPlayback } from './utils';
+import type { AudioFeatures } from './types';
+import { CLIENT_ID, REDIRECT_URI, SCOPES, TRACK_URIS } from './config';
 
-import LoginScreen from './components/LoginScreen.tsx';
-import Visualizer from './components/Visualizer.tsx';
-import PlayerUI from './components/PlayerUI.tsx';
+import LoginScreen from './components/LoginScreen';
+import Visualizer from './components/Visualizer';
+import PlayerUI from './components/PlayerUI';
 
 const App: React.FC = () => {
   const [token, setToken] = useState<string | null>(null);

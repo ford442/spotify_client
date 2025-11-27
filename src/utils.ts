@@ -1,5 +1,4 @@
-
-import type { AudioFeatures } from './types.ts';
+import type { AudioFeatures } from './types';
 
 export const fetchAudioFeatures = async (
   trackId: string,
