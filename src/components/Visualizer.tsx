@@ -1,6 +1,5 @@
-
 import React, { useRef, useEffect, useCallback } from 'react';
-import type { AudioFeatures } from '../types.ts';
+import type { AudioFeatures } from '../types';
 
 interface VisualizerProps {
   isPlaying: boolean;

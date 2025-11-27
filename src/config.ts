@@ -1,4 +1,3 @@
-
 // IMPORTANT: You need to register your app on the Spotify Developer Dashboard
 // to get a client ID.
 // 1. Go to: https://developer.spotify.com/dashboard/
@@ -7,7 +6,7 @@
 // 4. Go to "Edit Settings" for your app.
 // 5. Add a "Redirect URI". This URI MUST match exactly what you set in the `REDIRECT_URI` variable below.
 //    For local development, a common URI is http://localhost:5173/ or just the base URL of where you are running the app.
-export const CLIENT_ID = '8e95cac2565c49499f9ebb6b9bd4d93d';
+export const CLIENT_ID: string = '8e95cac2565c49499f9ebb6b9bd4d93d';
 
 // This should match the Redirect URI you set in your Spotify app settings.
 // ** CRITICAL STEP FOR LOGIN TO WORK **

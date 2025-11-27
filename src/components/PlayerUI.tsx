@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Play, Pause, SkipForward, SkipBack, Loader2 } from 'lucide-react';
-import type { Track } from '../types.ts';
+import type { Track } from '../types';
 
 interface PlayerUIProps {
   status: string;

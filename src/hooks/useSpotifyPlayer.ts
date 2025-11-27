@@ -1,6 +1,5 @@
-
 import { useState, useEffect, useRef, useCallback } from 'react';
-import type { SpotifyPlayer, PlaybackState, Track } from '../types.ts';
+import type { SpotifyPlayer, PlaybackState, Track } from '../types';
 
 const SCRIPT_SRC = 'https://sdk.scdn.co/spotify-player.js';
 
