@@ -28,6 +28,10 @@
 //    For production: Your deployed URL (e.g., https://yourdomain.com/)
 // ============================================================================
 
+// Note: It's safe to have the Client ID in source code - it's a public identifier
+// and is meant to be visible in the frontend. Client Secrets should NEVER be committed.
+// For better practice, you can move this to an environment variable:
+// export const CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID || '8e95cac2565c49499f9ebb6b9bd4d93d';
 export const CLIENT_ID: string = '8e95cac2565c49499f9ebb6b9bd4d93d';
 
 // ============================================================================

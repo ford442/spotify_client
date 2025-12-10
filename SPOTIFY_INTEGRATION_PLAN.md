@@ -371,5 +371,4 @@ A: Add track URIs to `TRACK_URIS` in `config.ts` for Web Playback SDK, or add tr
 ---
 
 **Document Version**: 1.0  
-**Last Updated**: December 2024  
 **Status**: Recommendation Phase - Implementation Pending
