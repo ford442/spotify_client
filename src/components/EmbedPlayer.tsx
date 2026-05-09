@@ -4,9 +4,10 @@ import { ArrowLeft } from 'lucide-react';
 
 interface EmbedPlayerProps {
   onBack: () => void;
+  fallbackMessage?: string;
 }
 
-const EmbedPlayer: React.FC<EmbedPlayerProps> = ({ onBack }) => {
+const EmbedPlayer: React.FC<EmbedPlayerProps> = ({ onBack, fallbackMessage }) => {
   // Helper to extract track ID from spotify:track:ID
   const getTrackId = (uri: string) => {
     const parts = uri.split(':');
@@ -26,6 +27,13 @@ const EmbedPlayer: React.FC<EmbedPlayerProps> = ({ onBack }) => {
           </button>
           <h1 className="text-2xl sm:text-3xl font-bold">Listen Now</h1>
         </div>
+
+        {fallbackMessage && (
+          <div className="mb-8 p-4 bg-yellow-900/50 border border-yellow-600 rounded-lg text-yellow-200">
+            <p className="font-semibold mb-1">Switched to Embed Mode</p>
+            <p className="text-sm">{fallbackMessage}</p>
+          </div>
+        )}
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
           {TRACK_URIS.map((uri, index) => {
