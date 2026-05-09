@@ -99,10 +99,8 @@ const App: React.FC = () => {
   // Effect to handle auth errors from the player hook
   useEffect(() => {
     if (error && (error.includes('Authentication Failed') || error.includes('Account Error'))) {
-      const timer = setTimeout(() => {
-        handleDisconnect();
-      }, 3000);
-      return () => clearTimeout(timer);
+      // Streamline fallback: immediately send to embed view.
+      setViewMode('embed');
     }
   }, [error]);
 
@@ -133,7 +131,7 @@ const App: React.FC = () => {
 
   // 1. Embed Mode
   if (viewMode === 'embed') {
-    return <EmbedPlayer onBack={handleBackToLanding} />;
+    return <EmbedPlayer onBack={handleBackToLanding} fallbackMessage={error || undefined} />;
   }
 
   // 2. Landing / Login Mode (if no token or explicitly in landing mode)
